@@ -1,0 +1,277 @@
+* {
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+}
+
+#Home,
+#Download,
+#Services,
+#AboutUs,
+#ContactUs {
+    animation: transformsca linear;
+    animation-timeline: view();
+}
+
+@keyframes transformsca {
+    15% {
+        opacity: 0.9;
+        transform: scale(0.5);
+    }
+
+    45% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    70% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+body {
+    background-color: rgba(0, 0, 0, 1);
+    overflow: auto;
+    overscroll-behavior: contain;
+    overflow-x: hidden;
+    /* background: linear-gradient(135deg, #3494e6, #ec6ead); Gradient background */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+    /* Text color */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+header {
+    width: 100vw !important;
+    background-color: #1a1a1a;
+    /* رنگ پس زمینه هدر */
+    backdrop-filter: blur(10px);
+    /* افزودن افکت blur به هدر */
+    display: flex;
+    height: 10vh;
+    position: sticky;
+    left: 1vw;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    /* رنگ متن هدر */
+}
+
+header>#logo {
+    flex: 1 0 20%;
+    justify-self: flex-start;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #ffffff;
+    /* رنگ متن لوگو */
+}
+
+
+header button,
+header>a {
+    flex: 1 0 20%;
+    margin-left: 10%;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 15px;
+    border: none;
+}
+
+#Home {
+    height: 98vh;
+    width: 98vw;
+    background-color: #3332323d;
+    border-radius: 15px;
+    font-size: 2em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: auto;
+}
+
+.btn {
+    flex: 1 0 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#links {
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+    display: flex;
+    flex: 1 0 40%;
+}
+
+.btn button {
+    align-items: center;
+    background-clip: padding-box;
+    background-color: #fa6400;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 1.25;
+    margin: 0;
+    min-height: 3rem;
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: auto;
+}
+
+#Download {
+    margin-top: 30px;
+    height: 98vh;
+    width: 98vw;
+    background-color: #3332323d;
+    border-radius: 15px;
+    font-size: 2em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#os-feat {
+    width: 45vw;
+    margin: 2vh;
+    height: 30vh;
+    background-color: transparent;
+    color: #f1f1f1;
+    justify-self: center;
+    text-align: left;
+    line-height: 1.5;
+    font-size: 0.7em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#AboutUs {
+    margin-top: 30px;
+    height: 98vh;
+    width: 98vw;
+    text-align: center;
+    background-color: #3332323d;
+    border-radius: 15px;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#Services {
+    margin-top: 30px;
+    height: 98vh;
+    width: 98vw;
+    text-align: center;
+    background-color: #3332323d;
+    border-radius: 15px;
+    font-size: 2em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#Services  img {
+    max-width: 30vw;
+    border-radius: 15px;
+}
+#Services #sect {
+    max-width: 45vw;
+    max-height: 15vh;
+}
+#Services h2 {
+    font-size: 18px;
+    margin: 10px;
+}
+#ContactUs {
+    margin-top: 30px;
+    height: 98vh;
+    width: 98vw;
+    text-align: center;
+    background-color: #3332323d;
+    border-radius: 15px;
+    font-size: 2em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width:800px) {
+    #links {
+        display: none;
+    }
+
+    #Home>img {
+        min-width: 50vw;
+        margin: 5px;
+    }
+
+    #Home p {
+        text-align: center;
+    }
+
+    #Home {
+        height: 85vh;
+    }
+    #Services  img {
+        max-width: 75vw;
+        border-radius: 15px;
+    }
+    #Services #sect {
+        max-width: 90vw;
+        max-height: 25vh;
+    }
+    #os-feat {
+        width: 90vw;
+        margin: 2vh;
+        height: 30vh;
+        background-color: transparent;
+        color: #f1f1f1;
+        justify-self: center;
+        text-align: left;
+        line-height: 1.5;
+        font-size: 0.7em;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+}
