@@ -215,6 +215,9 @@ header>a {
     max-width: 30vw;
     border-radius: 15px;
 }
+#Services  img:hover {
+transition: 0.5s;
+    transform:scale(1.2);}
 #Services #sect {
     max-width: 45vw;
     max-height: 15vh;
