@@ -2,6 +2,6 @@
     let paramString = window.location.href.split('?')[1];
     let queryString = new URLSearchParams(paramString);
     for (let pair of queryString.entries()) {
-        window.open(pair[1], '_blank');
+        window.open(pair[1]);
     }
 </script>
