@@ -194,7 +194,7 @@ header>a {
     text-align: center;
     background-color: #3332323d;
     border-radius: 15px;
-    font-size: 1.5em;
+    font-size: 1.2em;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -207,7 +207,7 @@ header>a {
     text-align: center;
     background-color: #3332323d;
     border-radius: 15px;
-    font-size: 2em;
+    font-size: 1.5em;
     display: flex;
     justify-content: space-around;
     align-items: center;
