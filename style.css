@@ -13,12 +13,13 @@ html {
 #ContactUs {
     animation: transformsca linear;
     animation-timeline: view();
+    min-height: 100vh !important;
 }
 
 @keyframes transformsca {
     15% {
         opacity: 0.9;
-        transform: scale(0.5);
+        transform: scale(0.8);
     }
 
     45% {
@@ -163,7 +164,6 @@ header>a {
 
 #Download {
     margin-top: 30px;
-    height: 105vh;
     width: 95vw;
     background-color: #3332323d;
     border-radius: 15px;
@@ -190,7 +190,6 @@ header>a {
 
 #AboutUs {
     margin-top: 30px;
-    height: 98vh;
     width: 98vw;
     text-align: center;
     background-color: #3332323d;
@@ -203,7 +202,6 @@ header>a {
 }
 #Services {
     margin-top: 30px;
-    height: 105vh;
     width: 95vw;
     margin:auto;
     text-align: center;
@@ -232,7 +230,6 @@ transition: 0.5s;
 }
 #ContactUs {
     margin-top: 30px;
-    height: 98vh;
     width: 98vw;
     text-align: center;
     background-color: #3332323d;
