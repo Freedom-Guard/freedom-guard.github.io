@@ -3,7 +3,9 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-decoration: none;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 #Home,
 #Download,
 #Services,
