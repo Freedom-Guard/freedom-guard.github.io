@@ -16,6 +16,7 @@ html {
     min-height: 100vh !important;
     margin: auto;
     display: block;
+    width: 95vw;
 }
 
 @keyframes transformsca {
@@ -192,7 +193,7 @@ header>a {
 
 #AboutUs {
     margin-top: 30px;
-    width: 98vw;
+    width: 95vw;
     text-align: center;
     background-color: #3332323d;
     border-radius: 15px;
@@ -232,7 +233,7 @@ transition: 0.5s;
 }
 #ContactUs {
     margin-top: 30px;
-    width: 98vw;
+    width: 95vw;
     text-align: center;
     background-color: #3332323d;
     border-radius: 15px;
