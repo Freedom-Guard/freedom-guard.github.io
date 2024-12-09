@@ -14,6 +14,7 @@ html {
     animation: transformsca linear;
     animation-timeline: view();
     min-height: 100vh !important;
+    margin: auto;
 }
 
 @keyframes transformsca {
