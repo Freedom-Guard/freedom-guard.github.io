@@ -161,8 +161,8 @@ header>a {
 
 #Download {
     margin-top: 30px;
-    height: 98vh;
-    width: 98vw;
+    height: 105vh;
+    width: 95vw;
     background-color: #3332323d;
     border-radius: 15px;
     font-size: 2em;
@@ -170,6 +170,7 @@ header>a {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    margin:auto;
 }
 
 #os-feat {
@@ -200,8 +201,9 @@ header>a {
 }
 #Services {
     margin-top: 30px;
-    height: 98vh;
-    width: 98vw;
+    height: 105vh;
+    width: 95vw;
+    margin:auto;
     text-align: center;
     background-color: #3332323d;
     border-radius: 15px;
