@@ -135,7 +135,7 @@ header button:hover {
     background-color: #bb86fc;
 }
 
-#os-feat {
+.os-feat {
     margin-top: 20px;
     text-align: left;
     font-size: 1.1em;
@@ -246,7 +246,7 @@ footer {
     #os {
         width: 99%;
     }
-
+    .os-feat,
     #Services #sect {
         width: 99%;
     }
