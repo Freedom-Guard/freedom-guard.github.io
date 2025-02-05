@@ -266,20 +266,19 @@ footer {
     background-color: #7c4dff;
 }
 .fade {
-    animation: fade ease-in-out;
-    animation-timeline: view();
+    animation: fade-left 0.8s ease;
 }
-@keyframes fade {
+@keyframes fade-left {
     0% {
         transform: translateX(-100px);
     }
     
     30% {
-        transition: 0.3s;
+        transform: translateX(+30px);
         opacity: 1;
     }
     100% {
-        transform: translateX(+30px);
+        transform: translateX(0px);
         opacity: 1;
     }
 }
