@@ -37,24 +37,39 @@
                 می‌کنیم.</p>
         </section>
 
-        <!-- داده‌های جمع‌آوری شده -->
         <section id="data-collection" class="mt-6">
-            <h2 class="text-2xl font-semibold border-b pb-2 mb-4">۲. چه اطلاعاتی ثبت می‌شود؟</h2>
-            <p>هنگامی که شما به فیلترشکن متصل می‌شوید، ما به‌صورت ناشناس اطلاعات زیر را ثبت می‌کنیم:</p>
+            <h2 class="text-2xl font-semibold border-b pb-2 mb-4">۲. اطلاعات ثبت‌شده: حریم خصوصی شما در اولویت ماست</h2>
+            <p>هنگامی که از فیلترشکن ما استفاده می‌کنید، اطلاعات زیر به صورت کاملا <strong>ناشناس</strong> و با هدف
+                بهبود عملکرد و ارائه خدمات بهتر ثبت می‌شوند:</p>
+
+            <h3>اطلاعات پایه</h3>
             <ul class="list-disc list-inside ml-4">
-                <li><strong>ISP (ارائه‌دهنده خدمات اینترنت) که خودتان در تنظیمات ثبت کردید</strong></li>
-                <li><strong>هسته استفاده‌شده (Core)</strong></li>
-                <li><strong>وضعیت اتصال (موفق یا ناموفق)</strong></li>
-                <li><strong>مهر زمانی (Timestamp)</strong></li>
+                <li><strong>ISP (ارائه‌دهنده خدمات اینترنت):</strong> این اطلاعات به صورت ناشناس و فقط در صورتی که در
+                    تنظیمات برنامه ثبت کرده باشید، ثبت می‌شود.</li>
+                <li><strong>هسته استفاده‌شده (Core):</strong> نوع هسته‌ای که برای اتصال به فیلترشکن استفاده می‌کنید.
+                </li>
+                <li><strong>وضعیت اتصال:</strong> وضعیت اتصال شما (موفق یا ناموفق) به فیلترشکن.</li>
+                <li><strong>مهر زمانی (Timestamp):</strong> زمان دقیق اتصال یا قطع اتصال شما.</li>
             </ul>
-            و اگر Freedom Link فعال باشد اطلاعات زیر نیز ارسال می‌شود
+
+            <h3>اطلاعات تکمیلی (فقط در صورت فعال بودن Freedom Link)</h3>
             <ul class="list-disc list-inside ml-4">
-                <li><strong>config: </strong>کانفیگ استفاده شده</li>
-                <li><strong>ping: </strong>تاخیر کانفیگ</li>
-                <li><strong>device: </strong>سیستم عامل </li>
+                <li><strong>Config:</strong> کانفیگ مورد استفاده برای اتصال.</li>
+                <li><strong>Ping:</strong> میزان تاخیر کانفیگ.</li>
+                <li><strong>Device:</strong> نوع سیستم عامل دستگاه شما.</li>
             </ul>
-            <p class="text-green-400 mt-2">✅ این داده‌ها کاملاً ناشناس بوده و شامل IP یا اطلاعات شناسایی شخصی نیستند.
-            </p>
+
+            <h3>رویدادهای ثبت‌شده</h3>
+            <ul class="list-disc list-inside ml-4">
+                <li><code>connected(isp, core)</code>: ثبت رویداد اتصال موفق به همراه ISP و هسته مورد استفاده.</li>
+                <li><code>not_connected_auto (isp)</code>: ثبت رویداد عدم اتصال خودکار به همراه ISP.</li>
+                <li><code>new_user (isp)</code>: ثبت رویداد کاربر جدید به همراه ISP.</li>
+                <li><code>app_started</code>: ثبت رویداد اجرای برنامه.</li>
+            </ul>
+
+            <h3>حریم خصوصی شما تضمین‌شده است</h3>
+            <p class="text-green-400 mt-2">✅ تمامی داده‌های ثبت‌شده کاملا <strong>ناشناس</strong> هستند و به هیچ وجه
+                شامل IP یا اطلاعات شناسایی شخصی شما نمی‌شوند.</p>
         </section>
 
         <!-- استفاده از داده‌ها -->
@@ -69,10 +84,29 @@
             <p class="text-gray-400 mt-2">این داده‌ها تنها برای تحلیل داخلی استفاده شده و با هیچ شخص ثالثی به اشتراک
                 گذاشته نمی‌شود.</p>
         </section>
+        <section class="mt-6">
+            <h2 class="text-2xl font-semibold border-b pb-2 mb-4">۴. کانفیگ خودکار</h2>
+            <p>
+                ویژگی <strong>کانفیگ خودکار</strong> در گارد آزادی به‌صورت پیش‌فرض فعال است. این سیستم بر اساس
+                <strong>ISP انتخاب‌شده</strong> توسط کاربر، بهترین کانفیگ ممکن را برای اتصال به اینترنت آزاد تنظیم
+                می‌کند.
+            </p>
+
+            <h3 class="text-xl font-semibold mb-4 pt-4">منبع تأمین کانفیگ خودکار چیست؟</h3>
+            <p>
+                گارد آزادی از هیچ تأمین‌کننده‌ی خاصی برای کانفیگ خودکار استفاده نمی‌کند. این کانفیگ‌ها از چند منبع تأمین
+                می‌شوند:
+            </p>
+            <ul class="list-disc list-inside ml-4 mt-2">
+                <li>کانفیگ‌های اهدایی کاربران</li>
+                <li>کانفیگ‌هایی که از طریق <strong>Freedom Link</strong> ارسال شده‌اند</li>
+                <li>کانفیگ های جمع آوری شده از کانال های تلگرامی یا منابع دیگر</li>
+            </ul>
+        </section>
 
         <!-- تماس با ما -->
         <section id="contact" class="mt-6">
-            <h2 class="text-2xl font-semibold border-b pb-2 mb-4">۴. تماس با ما</h2>
+            <h2 class="text-2xl font-semibold border-b pb-2 mb-4"> تماس با ما</h2>
             <p>در صورت داشتن هرگونه سوال، می‌توانید با ما در ارتباط باشید.</p>
         </section>
 
