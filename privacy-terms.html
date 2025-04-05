@@ -21,10 +21,20 @@
 <body class="bg-gray-900 text-white p-6">
 
     <!-- Header -->
-    <header class="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
-        <h1 class="text-3xl font-bold">حریم خصوصی کاربران</h1>
-        <p class="text-gray-400 mt-2">آخرین به‌روزرسانی: 2/25/2025</p>
+    <header class="bg-gradient-to-r from-blue-600 to-purple-600 p-8 rounded-lg shadow-lg text-center">
+        <h1 class="text-4xl font-extrabold">حریم خصوصی کاربران</h1>
+        <p class="text-gray-200 mt-2">آخرین به‌روزرسانی: 16 فروردین 1404</p>
+        <p class="text-gray-200 mt-2"><a href="./">برگشت به وبسایت</a></p>
     </header>
+
+    <!-- Navigation -->
+    <nav class="bg-gray-800 p-4 rounded-lg shadow-lg mt-6 flex justify-center space-x-4 rtl:space-x-reverse">
+        <a href="#intro" class="text-white hover:text-blue-400 transition">مقدمه</a>
+        <a href="#data-collection" class="text-white hover:text-blue-400 transition">اطلاعات ثبت‌شده</a>
+        <a href="#data-usage" class="text-white hover:text-blue-400 transition">استفاده از داده‌ها</a>
+        <a href="#firebase" class="text-white hover:text-blue-400 transition">Firebase</a>
+        <a href="#contact" class="text-white hover:text-blue-400 transition">تماس با ما</a>
+    </nav>
 
     <!-- Main Content -->
     <main class="max-w-3xl mx-auto bg-gray-800 p-8 mt-6 rounded-lg shadow-lg leading-relaxed">
@@ -84,8 +94,27 @@
             <p class="text-gray-400 mt-2">این داده‌ها تنها برای تحلیل داخلی استفاده شده و با هیچ شخص ثالثی به اشتراک
                 گذاشته نمی‌شود.</p>
         </section>
+
+        <!-- Firebase و Firebase Messaging -->
+        <section id="firebase" class="mt-6">
+            <h2 class="text-2xl font-semibold border-b pb-2 mb-4">۴. استفاده از Firebase و Firebase Messaging</h2>
+            <p>نسخه موبایل گارد آزادی از <strong>Firebase</strong> و <strong>Firebase Messaging</strong> برای ارائه
+                اعلان‌ها و بهبود تجربه کاربری استفاده می‌کند. اطلاعات زیر ممکن است توسط Firebase جمع‌آوری شود:</p>
+            <ul class="list-disc list-inside ml-4">
+                <li>شناسه دستگاه (Device ID)</li>
+                <li>توکن اعلان (Notification Token)</li>
+                <li>اطلاعات مربوط به عملکرد برنامه (Crash Reports)</li>
+                <li>موفقیت یا عدم موفقیت اتصال </li>
+            </ul>
+            <p>این اطلاعات برای ارسال اعلان‌های مرتبط و بهبود عملکرد برنامه استفاده می‌شود و مطابق با سیاست‌های حریم
+                خصوصی Firebase مدیریت می‌شود.</p>
+            <p class="text-gray-400 mt-2">برای اطلاعات بیشتر، می‌توانید به <a
+                    href="https://firebase.google.com/support/privacy" class="text-blue-400 underline">سیاست‌های حریم
+                    خصوصی Firebase</a> مراجعه کنید.</p>
+        </section>
+
         <section class="mt-6">
-            <h2 class="text-2xl font-semibold border-b pb-2 mb-4">۴. کانفیگ خودکار</h2>
+            <h2 class="text-2xl font-semibold border-b pb-2 mb-4">۵. کانفیگ خودکار</h2>
             <p>
                 ویژگی <strong>کانفیگ خودکار</strong> در گارد آزادی به‌صورت پیش‌فرض فعال است. این سیستم بر اساس
                 <strong>ISP انتخاب‌شده</strong> توسط کاربر، بهترین کانفیگ ممکن را برای اتصال به اینترنت آزاد تنظیم
@@ -104,8 +133,7 @@
             </ul>
         </section>
 
-        <!-- تماس با ما -->
-        <section id="contact" class="mt-6">
+        <section id="contact">
             <h2 class="text-2xl font-semibold border-b pb-2 mb-4"> تماس با ما</h2>
             <p>در صورت داشتن هرگونه سوال، می‌توانید با ما در ارتباط باشید.</p>
         </section>
