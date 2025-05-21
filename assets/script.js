@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function setTheme(theme) {
         document.documentElement.setAttribute('data-theme', theme);
         localStorage.setItem('theme', theme);
-        
+
         if (theme === 'dark') {
             sunIcon.style.display = 'none';
             moonIcon.style.display = 'block';
@@ -75,41 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Scroll animations
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-    };
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    // Add fade animations styles
-    const fadeStyle = document.createElement('style');
-    fadeStyle.textContent = `
-        .fade-out {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        .fade-in {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        @media (prefers-reduced-motion: reduce) {
-            .fade-out {
-                transition: none;
-            }
-        }
-    `;
-    document.head.appendChild(fadeStyle);
 
     // Scroll to top functionality
     const scrollToTop = document.querySelector('.scroll-to-top');
@@ -137,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const navLink = document.querySelector(`a[href="#${sectionId}"]`);
 
             if (navLink) {
-                navLink.classList.toggle('active', 
+                navLink.classList.toggle('active',
                     scrollY > sectionTop && scrollY <= sectionTop + sectionHeight
                 );
             }
@@ -149,17 +115,4 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinks.style.display = window.innerWidth > 768 ? 'flex' : 'none';
     });
 
-    // Loading animation for download buttons
-    document.querySelectorAll('.download-card .btn').forEach(button => {
-        button.addEventListener('click', function() {
-            this.classList.add('loading');
-            setTimeout(() => this.classList.remove('loading'), 2000);
-        });
-    });
-
-    // Initialize animations
-    document.querySelectorAll('.feature-card, .service-card, .download-card, section').forEach(el => {
-        el.classList.add('fade-out');
-        observer.observe(el);
-    });
 });
