@@ -857,10 +857,7 @@ h6 {
     }
 
     .hero-stats {
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-        padding: 1rem;
+        display:none;
     }
 
     .features-grid,
