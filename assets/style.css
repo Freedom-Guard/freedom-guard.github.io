@@ -235,6 +235,8 @@ h6 {
     padding: var(--spacing-3xl) 0;
     position: relative;
     overflow: hidden;
+    max-width:100vw;
+    padding:1em;
 }
 
 .hero-background {
