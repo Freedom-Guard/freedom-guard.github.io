@@ -233,7 +233,7 @@ h6 {
 
 .hero-section {
     padding-top: 1em;
-    max-width:100vw;
+    max-width: 100vw;
 }
 
 .hero-content {
@@ -631,6 +631,13 @@ h6 {
     text-align: center;
 }
 
+.cta-group {
+    justify-content: center;
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
 .social-links {
     display: flex;
     justify-content: center;
@@ -857,7 +864,7 @@ h6 {
     }
 
     .hero-stats {
-        display:none;
+        display: none;
     }
 
     .features-grid,
