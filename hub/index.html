@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freedom Guard - Troubleshooting</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <style>
+        .accordion-content {
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+
+        .accordion-content.open {
+            max-height: 1000px;
+            opacity: 1;
+        }
+
+        .accordion-toggle:checked~.accordion-content {
+            max-height: 1000px;
+            opacity: 1;
+        }
+
+        .accordion-toggle:checked+.accordion-header .rotate-icon {
+            transform: rotate(180deg);
+        }
+
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            margin: 1em !important;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans transition-colors duration-500">
+
+    <header
+        class="bg-gradient-to-r from-indigo-600 to-blue-500 dark:from-gray-800 dark:to-gray-900 text-white shadow-lg">
+        <div class="container mx-auto flex justify-between items-center p-6">
+            <h1 class="text-2xl md:text-3xl font-extrabold tracking-wide">🌐 Freedom Guard</h1>
+            <button id="theme-toggle"
+                class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <section class="container mx-auto my-12 px-6 text-center">
+        <h2 class="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+            Troubleshooting & Error Fixes
+        </h2>
+        <p class="max-w-2xl mx-auto text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+            Welcome to <span class="font-semibold">Freedom Guard</span>.
+            Find elegant solutions for common issues, errors, and unexpected problems below.
+        </p>
+    </section>
+
+    <section class="container mx-auto my-12 px-6 max-w-4xl">
+        <div class="bg-white dark:bg-gray-800 shadow-lg rounded-2xl p-8 space-y-6">
+            <div x-data="{ open: '' }" class="flex flex-col gap-3">
+                <div class="border-b border-gray-200 dark:border-gray-700">
+                    <input type="radio" name="accordion" id="macos" class="accordion-toggle hidden" x-model="open"
+                        value="macos">
+                    <label for="macos"
+                        class="accordion-header flex justify-between items-center p-4 cursor-pointer bg-gray-100 dark:bg-gray-700 rounded-lg">
+                        <h2 class="text-xl font-bold text-blue-600 dark:text-blue-400">🔧 Fix: osascript Access Problem
+                            [macOS]</h2>
+                        <svg class="w-5 h-5 rotate-icon transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </label>
+                    <div class="accordion-content" x-show="open === 'macos'" x-cloak>
+                        <div class="p-4 space-y-6 text-gray-700 dark:text-gray-300">
+                            <p class="leading-relaxed">
+                                This error occurs when macOS blocks <code
+                                    class="bg-gray-200 dark:bg-gray-700 px-1 rounded">osascript</code> or when
+                                <strong>Freedom Guard</strong> lacks permissions to manage proxy and network settings.
+                            </p>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-2">1. Grant Automation Permissions</h3>
+                                <ul class="list-decimal list-inside space-y-1">
+                                    <li>Open <strong>System Settings → Privacy & Security → Automation</strong></li>
+                                    <li>Find <code>Freedom Guard</code> in the list</li>
+                                    <li>Enable permissions for <strong>System Events</strong> or
+                                        <strong>osascript</strong>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-2">2. Accessibility & Full Disk Access</h3>
+                                <ul class="list-decimal list-inside space-y-1">
+                                    <li>Go to <strong>System Settings → Privacy & Security</strong></li>
+                                    <li>In <strong>Accessibility</strong>, click <code>+</code> and add
+                                        <code>Freedom Guard</code>
+                                    </li>
+                                    <li>In <strong>Full Disk Access</strong>, add <code>Freedom Guard</code></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-2">3. Reset Automation Permissions</h3>
+                                <p>Run this command in Terminal:</p>
+                                <pre
+                                    class="bg-gray-200 dark:bg-gray-700 p-3 rounded-lg text-sm overflow-x-auto">tccutil reset AppleEvents</pre>
+                                <p>Restart your Mac to request permissions again.</p>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-2">4. Manual Proxy / TUN Mode Setup</h3>
+                                <h4 class="font-semibold mt-2">Proxy Mode</h4>
+                                <pre class="bg-gray-200 dark:bg-gray-700 p-3 rounded-lg text-sm overflow-x-auto">
+networksetup -setwebproxy "Wi-Fi" 127.0.0.1 8086
+networksetup -setsecurewebproxy "Wi-Fi" 127.0.0.1 8086
+                                </pre>
+                                <p>To turn off:</p>
+                                <pre class="bg-gray-200 dark:bg-gray-700 p-3 rounded-lg text-sm overflow-x-auto">
+networksetup -setwebproxystate "Wi-Fi" off
+networksetup -setsecurewebproxystate "Wi-Fi" off
+                                </pre>
+                                <h4 class="font-semibold mt-2">TUN Mode</h4>
+                                <p>In <strong>System Settings → Privacy & Security</strong>, allow <strong>VPN / System
+                                        Extension</strong> access for Freedom Guard.</p>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-2">5. Restart & Test</h3>
+                                <ul class="list-decimal list-inside space-y-1">
+                                    <li>Completely close <code>Freedom Guard</code></li>
+                                    <li>Reopen the app</li>
+                                    <li>Select <strong>System Proxy</strong> or <strong>TUN Mode</strong></li>
+                                    <li>Test your connection</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border-b border-gray-200 dark:border-gray-700">
+                    <input type="radio" name="accordion" id="linux" class="accordion-toggle hidden" x-model="open"
+                        value="linux">
+                    <label for="linux"
+                        class="accordion-header flex justify-between items-center p-4 cursor-pointer bg-gray-100 dark:bg-gray-700 rounded-lg">
+                        <h2 class="text-xl font-bold text-blue-600 dark:text-blue-400">🔧 Fix: TUN Mode Issues [Linux]
+                        </h2>
+                        <svg class="w-5 h-5 rotate-icon transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </label>
+                    <div class="accordion-content" x-show="open === 'linux'" x-cloak>
+                        <div class="p-4 space-y-6 text-gray-700 dark:text-gray-300">
+                            <p class="leading-relaxed">
+                                The error occurs because creating and configuring a TUN interface on Linux requires root
+                                privileges. If logs show "operation not permitted" and the app wasn’t run as root, TUN
+                                mode cannot initialize.
+                            </p>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-2">1. Run with Root Privileges</h3>
+                                <p>Try running Freedom Guard with administrator (root) privileges:</p>
+                                <pre class="bg-gray-200 dark:bg-gray-700 p-3 rounded-lg text-sm overflow-x-auto">
+sudo ./freedom-guard-linux-x86_64.AppImage
+                                </pre>
+                                <p>Or, if installed:</p>
+                                <pre class="bg-gray-200 dark:bg-gray-700 p-3 rounded-lg text-sm overflow-x-auto">
+sudo freedom-guard
+                                </pre>
+                                <p>This allows the TUN interface to be created properly.</p>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-2">2. Running in TUN Mode</h3>
+                                <p>To enable TUN mode, provide root access to Freedom Guard. Execute these commands one
+                                    by one:</p>
+                                <h4 class="font-semibold mt-2">First Command</h4>
+                                <pre class="bg-gray-200 dark:bg-gray-700 p-3 rounded-lg text-sm overflow-x-auto">
+xhost +SI:localuser:root
+                                </pre>
+                                <p>Allows the root user to access your display for the graphical interface.</p>
+                                <h4 class="font-semibold mt-2">Second Command</h4>
+                                <pre class="bg-gray-200 dark:bg-gray-700 p-3 rounded-lg text-sm overflow-x-auto">
+sudo -E freedom-guard --no-sandbox
+                                </pre>
+                                <p>Runs Freedom Guard with root privileges. The <code>-E</code> preserves environment
+                                    variables, and <code>--no-sandbox</code> disables the sandbox for full system access
+                                    in TUN mode.</p>
+                                <h4 class="font-semibold mt-2">Third Command</h4>
+                                <pre class="bg-gray-200 dark:bg-gray-700 p-3 rounded-lg text-sm overflow-x-auto">
+xhost -SI:localuser:root
+                                </pre>
+                                <p>Revokes root access to your display after use for security.</p>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-2">3. Verify TUN Mode</h3>
+                                <ul class="list-decimal list-inside space-y-1">
+                                    <li>Close Freedom Guard completely</li>
+                                    <li>Reopen using the above commands</li>
+                                    <li>Select <strong>TUN Mode</strong></li>
+                                    <li>Test your connection</li>
+                                </ul>
+                                <p class="text-green-600 dark:text-green-400">Success! TUN mode should now work! 🚀</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border-b border-gray-200 dark:border-gray-700">
+                    <input type="radio" name="accordion" id="windows" class="accordion-toggle hidden" x-model="open"
+                        value="windows">
+                    <label for="windows"
+                        class="accordion-header flex justify-between items-center p-4 cursor-pointer bg-gray-100 dark:bg-gray-700 rounded-lg">
+                        <h2 class="text-xl font-bold text-blue-600 dark:text-blue-400">🔧 Fix: Windows Portable Version
+                            Issues</h2>
+                        <svg class="w-5 h-5 rotate-icon transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </label>
+                    <div class="accordion-content" x-show="open === 'windows'" x-cloak>
+                        <div class="p-4 space-y-6 text-gray-700 dark:text-gray-300">
+                            <h3 class="text-lg font-semibold mb-2">Important Notes for Windows Portable Version</h3>
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>Always run as Administrator</li>
+                                <li>The Portable version doesn't require installation</li>
+                                <li>Works on all Windows versions</li>
+                            </ul>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-2">1. Bypassing "Windows Protected Your PC" Warning
+                                </h3>
+                                <p>If Windows shows a "Windows protected your PC" message when running Freedom Guard:
+                                </p>
+                                <ul class="list-decimal list-inside space-y-1">
+                                    <li>Click <strong>More info</strong></li>
+                                    <li>Select <strong>Run anyway</strong></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-2">2. Run as Administrator</h3>
+                                <p>Right-click the Freedom Guard executable and select <strong>Run as
+                                        administrator</strong> to ensure proper functionality.</p>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-2">3. Test Connection</h3>
+                                <ul class="list-decimal list-inside space-y-1">
+                                    <li>Close Freedom Guard completely</li>
+                                    <li>Reopen as Administrator</li>
+                                    <li>Select your preferred mode (System Proxy or TUN Mode)</li>
+                                    <li>Test your connection</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="mt-16 bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-center py-6">
+        <p class="text-sm">&copy; 2025 Freedom Guard. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('theme-toggle').addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+        });
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
+
+</body>
+
+</html>
