@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Primary SEO -->
+    <title>Freedom Guard Apps | Open-Source Web & Privacy Tools</title>
+    <meta name="description"
+        content="Freedom Guard Apps is a curated collection of lightweight open-source web apps and tools focused on freedom, privacy, and simplicity.">
+    <meta name="keywords"
+        content="Freedom Guard, open source apps, privacy tools, web apps, freedom software, github apps">
+    <meta name="author" content="Freedom Guard">
+    <meta name="theme-color" content="#2563EB">
+
+    <!-- Indexing -->
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://freedom-guard.github.io/apps/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Freedom Guard Apps">
+    <meta property="og:description" content="Open-source apps & web tools focused on freedom and privacy.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Freedom Guard">
+
+    <!-- Icons -->
+    <link rel="icon" href="/assets/img/ico.webp" type="image/webp">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#2563EB'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Structured Data (SEO Boost) -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Freedom Guard Apps",
+    "description": "A collection of open-source apps and web tools focused on freedom and privacy.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Freedom Guard"
+    }
+  }
+  </script>
+</head>
+
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+    <!-- Header -->
+    <header class="max-w-6xl mx-auto px-6 py-6 flex flex-col items-center text-center gap-4">
+        <a href="/" id="back" class="block self-start m-4">
+            <nav class="max-w-6xl mx-auto px-6 py-4">
+                <button
+                    class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 hover:text-brand dark:hover:text-brand font-medium">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                    </svg>
+                    Back to Home
+                </button>
+            </nav>
+        </a>
+        <img src="/assets/img/ico.webp" alt="Freedom Guard Logo" srcset="" class="w-12">
+        <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight">
+            Freedom Guard
+        </h1>
+        <p class="mt-5 text-gray-600 dark:text-gray-400 max-w-2xl leading-relaxed">
+            A curated collection of open-source apps and web tools built for
+            <strong>freedom</strong>, <strong>privacy</strong>, and <strong>simplicity</strong>.
+        </p>
+    </header>
+
+    <!-- Apps -->
+    <main class="max-w-6xl mx-auto px-6 pb-24">
+        <section class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+            <!-- APP CARD -->
+            <article
+                class="group bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-sm hover:shadow-lg transition border border-gray-100 dark:border-gray-700">
+                <header class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-brand/10 text-brand flex items-center justify-center font-bold">
+                        <img src="/assets/img/ico.webp" alt="Freedom Guard Logo" srcset="">
+                    </div>
+                    <div>
+                        <h2 class="text-lg font-semibold group-hover:text-brand transition">
+                            Freedom Guard Desktop
+                        </h2>
+                        <span class="text-sm text-gray-500">Desktop</span>
+                    </div>
+                </header>
+
+                <p class="mt-4 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                    Freedom Guard – Open-source VPN for secure, fast, and free internet access with Freedom Browser,
+                    Freedom Warp, and Freedom Vibe. </p>
+
+                <footer class="mt-6 flex gap-5 text-sm">
+                    <a href="https://github.com/Freedom-Guard/Freedom-Guard"
+                        class="font-medium text-brand hover:underline" target="_blank" rel="noopener">
+                        GitHub
+                    </a>
+                    <a href="https://freedom-guard.github.io"
+                        class="font-medium text-gray-600 dark:text-gray-400 hover:underline" target="_blank"
+                        rel="noopener">
+                        Website
+                    </a>
+                </footer>
+            </article>
+            <!-- APP CARD -->
+            <article
+                class="group bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-sm hover:shadow-lg transition border border-gray-100 dark:border-gray-700">
+                <header class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-brand/10 text-brand flex items-center justify-center font-bold">
+                        <img src="/assets/img/ico.webp" alt="Freedom Guard Logo" srcset="">
+                    </div>
+                    <div>
+                        <h2 class="text-lg font-semibold group-hover:text-brand transition">
+                            Freedom Guard Mobile
+                        </h2>
+                        <span class="text-sm text-gray-500">Android</span>
+                    </div>
+                </header>
+
+                <p class="mt-4 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                    Freedom Guard Mobile – VPN for free internet access, including Freedom Browser, Freedom Link, and
+                    Freedom Vibe.</p>
+
+                <footer class="mt-6 flex gap-5 text-sm">
+                    <a href="https://github.com/Freedom-Guard/FG_MOBILE" class="font-medium text-brand hover:underline"
+                        target="_blank" rel="noopener">
+                        GitHub
+                    </a>
+                    <a href="https://freedom-guard.github.io"
+                        class="font-medium text-gray-600 dark:text-gray-400 hover:underline" target="_blank"
+                        rel="noopener">
+                        Website
+                    </a>
+                </footer>
+            </article>
+            <!-- APP CARD -->
+            <article
+                class="group bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-sm hover:shadow-lg transition border border-gray-100 dark:border-gray-700">
+                <header class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-brand/10 text-brand flex items-center justify-center font-bold">
+                        <img src="https://freedom-guard.github.io/Proxy/assets/ico.webp" alt="Freedom Guard Logo"
+                            srcset="">
+                    </div>
+                    <div>
+                        <h2 class="text-lg font-semibold group-hover:text-brand transition">
+                            TG Proxy
+                        </h2>
+                        <span class="text-sm text-gray-500">Web App</span>
+                    </div>
+                </header>
+
+                <p class="mt-4 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                    🌐 A simple Telegram proxy list web app with instant copy and random selection features. Proxies are
+                    collected from public Telegram sources like the Mahsa Net channel.
+                </p>
+
+                <footer class="mt-6 flex gap-5 text-sm">
+                    <a href="https://github.com/Freedom-Guard/Proxy" class="font-medium text-brand hover:underline"
+                        target="_blank" rel="noopener">
+                        GitHub
+                    </a>
+                    <a href="https://freedom-guard.github.io/Proxy"
+                        class="font-medium text-gray-600 dark:text-gray-400 hover:underline" target="_blank"
+                        rel="noopener">
+                        Website
+                    </a>
+                </footer>
+            </article>
+            <!-- APP CARD -->
+            <article
+                class="group bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-sm hover:shadow-lg transition border border-gray-100 dark:border-gray-700">
+                <header class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-brand/10 text-brand flex items-center justify-center font-bold">
+                        🚀
+                    </div>
+                    <div>
+                        <h2 class="text-lg font-semibold group-hover:text-brand transition">
+                            Freedom Core
+                        </h2>
+                        <span class="text-sm text-gray-500">Desktop</span>
+                    </div>
+                </header>
+
+                <p class="mt-4 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                    Freedom-Core is an open-source, cross-platform tool designed to manage and execute multiple
+                    networking cores (like Xray, sing-box, or future modules) via a lightweight API and CLI. It provides
+                    a secure, flexible, and easy-to-use foundation for network operations, automation, and dashboard
+                    integration.
+                </p>
+
+                <footer class="mt-6 flex gap-5 text-sm">
+                    <a href="https://github.com/Freedom-Guard/Freedom-Core"
+                        class="font-medium text-brand hover:underline" target="_blank" rel="noopener">
+                        GitHub
+                    </a>
+                    <a href="https://freedom-guard.github.io/FCORE-WEB-CLI/"
+                        class="font-medium text-gray-600 dark:text-gray-400 hover:underline" target="_blank"
+                        rel="noopener">
+                        Website
+                    </a>
+                </footer>
+            </article>
+
+
+
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-200 dark:border-gray-700">
+        <div class="max-w-6xl mx-auto px-6 py-10 text-sm text-gray-500 flex flex-col sm:flex-row justify-between gap-4">
+            <span>© 2026 Freedom Guard</span>
+            <span>Open-Source · Privacy-First</span>
+        </div>
+    </footer>
+
+</body>
+
+</html>
